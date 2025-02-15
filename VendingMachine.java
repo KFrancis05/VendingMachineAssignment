@@ -2,10 +2,14 @@ public class VendingMachine {
     
     private String[] snackNames;
     private int[] snackPrices;
+    private String[] candyNames;
+    private int[] candyPrices;
 
     public VendingMachine() {
         snackNames = new String[]{"Doritos", "Ruffles", "Cheetos"};
         snackPrices = new int[]{2, 1, 3};
+        candyNames = new String[]{"Hershey's Chocolate", "KitKat", "Reeses"};
+        candyPrices = new int[]{3, 2, 1};
     }
     
     public static void main (String[] args){
