@@ -8,10 +8,8 @@ public class VendingMachine {
     private int[] candyPrices;
 
     public VendingMachine() {
-        snackNames = new String[]{"Doritos", "Ruffles", "Cheetos"};
-        snackPrices = new int[]{2, 1, 3};
-        candyNames = new String[]{"Hershey's Chocolate", "KitKat", "Reeses"};
-        candyPrices = new int[]{3, 2, 1};
+        snackNames = new String[]{"Doritos", "Ruffles", "Cheetos", "Hershey's Chocolate", "KitKat", "Reeses"};
+        snackPrices = new int[]{2, 1, 3, 3, 2, 1};
     }
     
     public void displaySnacks() {
@@ -28,7 +26,7 @@ public class VendingMachine {
         if (choice > 0 && choice <= snackNames.length) {
             System.out.println("You chose "+snackNames[choice - 1]+".");
             System.out.print("Please insert money: ");
-            //OPTION TO INPUT MONEY HERE
+            int money = s.nextInt();
         } else {
             System.out.println("Invalid selection.");
         }
@@ -42,7 +40,7 @@ public class VendingMachine {
         System.out.println("\n You can choose any snack you would like!\n Then you will be asked to insert money to pay for your snack. \n Then you will be asked for a confirmation. \n Finally! You can enjoy your snack! ");
         VendingMachine vMachine = new VendingMachine();
         vMachine.displaySnacks();
-        vMachine.selectSnack();
+        vMachine.chooseSnack();
 
     }
 }
