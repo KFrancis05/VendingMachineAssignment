@@ -1,5 +1,13 @@
 public class VendingMachine {
     
+    private String[] snackNames;
+    private int[] snackPrices;
+
+    public VendingMachine() {
+        snackNames = new String[]{"Doritos", "Ruffles", "Cheetos"};
+        snackPrices = new int[]{2, 1, 3};
+    }
+    
     public static void main (String[] args){
 
         System.out.println("Welcome to the Vending Machine!");
