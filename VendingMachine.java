@@ -1,3 +1,4 @@
+import java.lang.foreign.Linker;
 import java.util.Scanner;
 
 public class VendingMachine {
@@ -40,6 +41,22 @@ public class VendingMachine {
         }
     }
 
+    public void confirmation(){
+
+        Scanner s = new Scanner(System.in);
+        System.out.println("Do you wish to confirm your option? Type Y for yes or N for no");
+        String option = s.next();
+        if (option.equals("Y")) {
+            
+            System.out.println("Great!");
+        }
+
+        else {
+
+            System.out.println("Alright, here is your refund");
+
+        }
+    }
 
     public static void main (String[] args){
 
@@ -49,6 +66,6 @@ public class VendingMachine {
         VendingMachine vMachine = new VendingMachine();
         vMachine.displaySnacks();
         vMachine.chooseSnack();
-
+        vMachine.confirmation();
     }
 }
