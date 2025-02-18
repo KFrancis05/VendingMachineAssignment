@@ -4,8 +4,6 @@ public class VendingMachine {
     
     private String[] snackNames;
     private int[] snackPrices;
-    private String[] candyNames;
-    private int[] candyPrices;
 
     public VendingMachine() {
         snackNames = new String[]{"Doritos", "Ruffles", "Cheetos", "Hershey's Chocolate", "KitKat", "Reeses"};
@@ -27,8 +25,18 @@ public class VendingMachine {
             System.out.println("You chose "+snackNames[choice - 1]+".");
             System.out.print("Please insert money: ");
             int money = s.nextInt();
+            change(choice, money);
         } else {
             System.out.println("Invalid selection.");
+        }
+    }
+
+    public void change(int c, int m) {
+        if(m > snackPrices[c-1]){
+            System.out.println("Change Returned: "+(m-snackPrices[c-1]));
+        }
+        else{
+            System.out.println("Insufficient Funds");
         }
     }
 
