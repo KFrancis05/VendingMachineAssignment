@@ -5,6 +5,7 @@ public class VendingMachine {
     
     private String[] snackNames;
     private int[] snackPrices;
+    private int payment;
 
     public VendingMachine() {
         snackNames = new String[]{"Doritos", "Ruffles", "Cheetos", "Hershey's Chocolate", "KitKat", "Reeses"};
@@ -26,6 +27,7 @@ public class VendingMachine {
             System.out.println("You chose "+snackNames[choice - 1]+".");
             System.out.print("Please insert money: ");
             int money = s.nextInt();
+            payment = money;
             change(choice, money);
         } else {
             System.out.println("Invalid selection.");
@@ -49,12 +51,13 @@ public class VendingMachine {
         if (option.equals("Y")) {
             
             System.out.println("Great!");
+            System.out.println("Thank you for your purchase!");
         }
 
         else {
 
-            System.out.println("Alright, here is your refund");
-
+            System.out.println("Alright, here is your refund amount: "+(payment));
+            System.out.println("Thank you for using our vending machine!");
         }
     }
 
@@ -67,5 +70,6 @@ public class VendingMachine {
         vMachine.displaySnacks();
         vMachine.chooseSnack();
         vMachine.confirmation();
+        
     }
 }
